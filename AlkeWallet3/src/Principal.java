@@ -1,0 +1,113 @@
+import java.util.Scanner;
+public class Principal {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner leer = new Scanner(System.in);
+		
+		System.out.println("Registro de cliente");
+		System.out.println("ID Cliente: ");
+		int ID = leer.nextInt();
+		leer.nextLine();
+		
+		System.out.println("Nombre cliente: ");
+		String titular = leer.nextLine();
+		
+		System.out.println("Número cuenta: ");
+		int numeroCuenta = leer.nextInt();
+		
+		System.out.println("Saldo inicial: ");
+		double saldo = leer.nextDouble();
+		
+		
+		/*
+		 * Creación de cuenta contemplando la opción del uso de dólares. 
+		 */
+		
+		CuentaBancaria cuenta = new CuentaUSD(numeroCuenta, saldo);
+		
+		/*
+		 *Creación del objeto cliente 		
+		 */
+		Cliente cliente = new Cliente (ID, titular, cuenta);
+		
+		System.out.println("\n\nCliente registrado con éxito");
+		System.out.println("\nHaga click para continuar al menú Alke Wallet");
+		leer.nextLine();
+		leer.nextLine();
+		
+		
+	
+		int opcion;
+		
+		/*
+		 * Menú con uso de do-while para realizar operaciones hasta que el usuario decida cerrar sesión.
+		 */
+
+	do {
+		System.out.println("\nBienvenido a Alke Wallet");
+		System.out.println("1. depositar clp");
+		System.out.println("2. depositar usd");
+		System.out.println("3. retirar clp");
+		System.out.println("4. retirar usd");
+		System.out.println("5. consultar saldo");
+		System.out.println("6. consultar datos cliente");
+		System.out.println("7. Cerrar sesión");
+		System.out.println("\nElegir opción: ");
+		
+	
+		opcion = leer.nextInt();
+		
+		switch (opcion) {
+		
+		case 1:
+			System.out.println("Ingrese la cantidad a depositar: ");
+			double deposito = leer.nextDouble();
+			cliente.getCuenta().depositar(deposito);
+			leer.nextLine();
+			leer.nextLine();
+			break;
+		case 2:
+			System.out.println("Ingrese la cantidad de dólares a depositar: ");
+			double depositousd = leer.nextDouble();
+			((CuentaUSD)cliente.getCuenta()).depositarUsd(depositousd);
+			leer.nextLine();
+			leer.nextLine();
+			break;
+		case 3:
+			System.out.println("Ingrese la cantidad a girar: ");
+			double retiro = leer.nextDouble();
+			cliente.getCuenta().retirar(retiro);
+			leer.nextLine();
+			leer.nextLine();
+			break;
+		case 4:
+			System.out.println("Ingrese la cantidad de dólares a girar: ");
+			double retirousd = leer.nextDouble();
+			((CuentaUSD)cliente.getCuenta()).retirarUsd(retirousd); //se usa para acceder a los métodos específicos de CuentaUSD
+			leer.nextLine();
+			leer.nextLine();
+			break;
+		case 5:
+			cliente.getCuenta().consultarSaldo();
+			leer.nextLine();
+			leer.nextLine();
+			break;
+		case 6: 
+			cliente.consultarDatosCliente(); //Este metodo está definido en la clase Cliente
+			leer.nextLine();
+			leer.nextLine();
+			break;
+		case 7:
+			System.out.println("\nCerrando sesión. Hasta luego!");			
+			break;
+		default:
+		}
+	}
+	while (opcion != 7);
+	leer.close();
+		
+	
+}
+}
