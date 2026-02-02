@@ -33,7 +33,6 @@
 ## ✨ Características
 
 - **Conversión Automática**: Sistema de tipo de cambio integrado
-- **Interfaz Intuitiva**: Menú interactivo por consola
 - **POO**: Implementación con Programación Orientada a Objetos
 - **Herencia**: Arquitectura escalable con herencia de clases
 - **Interfaces**: Uso de interfaces para funcionalidades especializadas
