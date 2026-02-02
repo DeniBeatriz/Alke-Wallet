@@ -60,9 +60,10 @@ Esta clase es una **herencia** de `CuentaBancaria` y utiliza una **interfaz de t
 - `auper.retirar(odouble montoUSD)`
 
 ---
-### 🔹 Clase: `Cliente`
 
-Clase `Cliente` n jereda de otras clases ni implementa interfaces. Su relación con resto del proyecto se basa en composición, ya que contiene unna referencia a un objeto de tipo `CuentaBancaria`.
+### 🔹 **Clase: `Cliente`**
+
+Clase `Cliente` no hereda de otras clases ni implementa interfaces. Su relación con resto del proyecto se basa en composición, ya que contiene unna referencia a un objeto de tipo `CuentaBancaria`.
 
 #### Atributos
 - **ID** (`private int`)  
@@ -83,7 +84,7 @@ Todos los métodos operan sobre montos expresados en **CLP**.
 
 ---
 
-# 🔁 Interface `TipoCambio`
+### 🔁 **Interface `TipoCambio`**
 
 La interface `TipoCambio` define el comportamiento necesario para realizar la **conversión de moneda desde dólares estadounidenses (USD) a pesos chilenos (CLP)** dentro del proyecto **Alke Wallet**.
 
@@ -100,7 +101,7 @@ Su propósito principal es **separar la lógica de conversión de divisas** de l
 
 ---
 
-# 🖥️ Clase Principal `Main` – Alke Wallet
+### 🖥️ **Clase Principal `Main` – Alke Wallet**
 
 ## 📌 Descripción General
 
