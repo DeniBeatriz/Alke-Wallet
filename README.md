@@ -258,6 +258,7 @@ public interface TipoCambio {
 ```
 
 Para modificar el tipo de cambio, actualiza este valor en la interface.
+```
 
 ---
 ## 📄 Pruebas unitarias
@@ -289,7 +290,9 @@ Recursos y referencias que facilitaron la resolución y mejorar de la calidad de
 1. JUnit.
 2. GitHub.
 3. Eclipse IDE.
-
+```
+```
+---
 
 ### Backlog de tareas.
 
@@ -299,14 +302,14 @@ Recursos y referencias que facilitaron la resolución y mejorar de la calidad de
 - Crear clase Cliente que maneje los datos del usuario de la wallet.
 - Crear Clase principal Main que permita la interacción del usuario con la wallet.
 
+```
 ---
 
 ## 📝 Recursos
 
 - Apoyo externo: Para el apoyo de este trabajo se revisaron perfiles y repositorios públicos de Github con el fin de comprender enfoques, estructuras y buenas prácticas de programación. Algunos son: 
     www.github.com/Mariocanedo
-    www.github.com/
-  
+      
 - Uso de recursos educativos: Para comprender el uso de GitHub se consultaron tutoriales educativos disponibles en YouTube:
     https://www.youtube.com/watch?v=P0lr6ldSQe4
   
@@ -315,34 +318,7 @@ Recursos y referencias que facilitaron la resolución y mejorar de la calidad de
       OpenIA
   
 
----
-
-## 📄 Licencia
-
-Este proyecto está licenciado bajo la **Licencia MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
-
 ```
-MIT License
-
-Copyright (c) 2025 Alke Wallet
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
 ```
 
 ---
@@ -355,9 +331,7 @@ SOFTWARE.
 
 ## 🙏 Agradecimientos
 
-- A la comunidad de Java por las mejores prácticas
-- A los instructores y mentores que apoyaron este proyecto
-- A todos los contribuidores que ayudan a mejorar Alke Wallet
+- A los compañeros del grupo G1 que estuvieron dispuestos a resolver dudas sobre código como uso de las herramientas.
 
 ---
 
