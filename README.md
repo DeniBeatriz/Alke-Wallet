@@ -279,7 +279,7 @@ Clase CuentaUSD
 - Método depositoUsdIncorrecto: se depositan 10 USD, saldo cuenta se mantiene en 1000.0 CLP.
 - Método retiroUsdCorrecto: se depositan 10 USD para evitar saldo insuficiente, se retiran 10 USD, se realiza conversión a CLP, nuevo saldo cuenta 1000.0 CLP.
 - Método retiroUsdIncorrecto: se retiran 10 USD, saldo es insuficiente por lo que la operación no se realiza, saldo cuenta se mantiene en 1000.0 CLP.
-
+```
 ```
 ---
 
@@ -316,7 +316,7 @@ Recursos y referencias que facilitaron la resolución y mejorar de la calidad de
 - Declaración de uso de Inteligencia Artificial: En la elaboración de este trabajo se utilizó inteligencia artificial como herramienta de apoyo, principalmente para comprender conceptos, resolver dudas técnicas y analizar posibles soluciones. El código final fue analizado, modificado y validado por la persona autora, asegurando el correcto funcionamiento, originalidad y el cumplimiento de principios éticos. Se hizo uso de:
       Claude
       OpenIA
-  
+ ``` 
 
 ```
 
