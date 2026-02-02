@@ -61,7 +61,7 @@ Esta clase es una **herencia** de `CuentaBancaria` y utiliza una **interfaz de t
 
 ---
 
-### 🔹 **Clase: `Cliente`**
+###🔹**Clase: `Cliente`**
 
 Clase `Cliente` no hereda de otras clases ni implementa interfaces. Su relación con resto del proyecto se basa en composición, ya que contiene unna referencia a un objeto de tipo `CuentaBancaria`.
 
