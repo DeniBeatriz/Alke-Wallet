@@ -301,7 +301,7 @@ Recursos y referencias que facilitaron la resolución y mejorar de la calidad de
 - Crear interface que especifique el valor del cambio de divisas.
 - Crear clase Cliente que maneje los datos del usuario de la wallet.
 - Crear Clase principal Main que permita la interacción del usuario con la wallet.
-
+```
 ```
 ---
 
@@ -319,7 +319,6 @@ Recursos y referencias que facilitaron la resolución y mejorar de la calidad de
   
 
 ```
-```
 
 ---
 
@@ -331,7 +330,7 @@ Recursos y referencias que facilitaron la resolución y mejorar de la calidad de
 
 ## 🙏 Agradecimientos
 
-- A los compañeros del grupo G1 que estuvieron dispuestos a resolver dudas sobre código como uso de las herramientas.
+- A los compañeros del grupo G1 que estuvieron dispuestos a resolver dudas sobre código así como uso de las herramientas.
 
 ---
 
