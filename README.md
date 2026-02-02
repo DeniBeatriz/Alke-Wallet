@@ -3,9 +3,6 @@
 
 <div align="center">
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue.svg?style=for-the-badge)
 
 **Billetera digital para gestión de activos con soporte multi-moneda**
 
@@ -29,13 +26,12 @@
 - 💲 Depósitos y retiros en **USD** con conversión automática
 - 📊 Consulta de saldo en tiempo real
 - 👤 Gestión de información del cliente
-- 🔄 Conversión de divisas integrada
+  
 
 ---
 
 ## ✨ Características
 
-- **Multi-moneda**: Soporte para operaciones en CLP y USD
 - **Conversión Automática**: Sistema de tipo de cambio integrado
 - **Interfaz Intuitiva**: Menú interactivo por consola
 - **POO**: Implementación con Programación Orientada a Objetos
@@ -89,7 +85,6 @@ classDiagram
     CuentaBancaria <|-- CuentaUSD : hereda
     Main --> CuentaBancaria : usa
     Main --> Cliente : usa
-    Main ..> Scanner : utiliza
     Cliente --> CuentaBancaria : tiene
     CuentaUSD ..|> TipoCambio : implementa
 ```
@@ -146,7 +141,7 @@ Al ejecutar la aplicación, se solicitará la siguiente información:
 ║ 4. Retirar en USD                  ║
 ║ 5. Consultar Saldo                 ║
 ║ 6. Consultar Datos del Cliente     ║
-║ 7. Salir                           ║
+║ 7. Cerra seción                    ║
 ╚════════════════════════════════════╝
 ```
 
@@ -157,12 +152,12 @@ Al ejecutar la aplicación, se solicitará la siguiente información:
 **Escenario:**
 - Saldo inicial: 10,000 CLP
 - Depósito: 10 USD
-- Tipo de cambio: 955 CLP/USD
+- Tipo de cambio: 873.36 CLP/USD
 
 **Resultado:**
 ```
-Monto convertido: 10 × 955 = 9,550 CLP
-Saldo final: 10,000 + 9,550 = 19,550 CLP
+Monto convertido: 10 × 873.36 = 8,733.6 CLP
+Saldo final: 10,000 + 8,733.6 = 18,733.6 CLP
 ```
 
 ---
@@ -231,7 +226,7 @@ Almacena la información del titular de la cuenta.
 Define la constante de conversión de divisas.
 
 **Constante:**
-- `VALOR_DOLAR` (double): Tipo de cambio USD a CLP (valor fijo: 955)
+- `VALOR_DOLAR` (double): Tipo de cambio USD a CLP (valor fijo: 873.36)
 
 #### 🖥️ Main (Clase Principal)
 
@@ -258,44 +253,67 @@ El valor del dólar está definido en la interface `TipoCambio`:
 
 ```java
 public interface TipoCambio {
-    double VALOR_DOLAR = 955.0;
+    double VALOR_DOLAR = 873.36;
 }
 ```
 
 Para modificar el tipo de cambio, actualiza este valor en la interface.
 
 ---
+## 📄 Pruebas unitarias
 
-## 🤝 Contribuciones
+En este proyecto se realizaron pruebas unitarias a los métodos depositar y retirar de las clases CuentaBancaria y CuentaUSD.
+Como saldo inicial se indicó un valor de 1000.0 CLP.
 
-Las contribuciones son bienvenidas. Por favor, sigue estos pasos:
+Clase CuentaBancaria
 
-1. Haz un Fork del proyecto
-2. Crea una rama para tu característica (`git checkout -b feature/NuevaCaracteristica`)
-3. Realiza tus cambios y haz commit (`git commit -m 'Añadir nueva característica'`)
-4. Sube tus cambios (`git push origin feature/NuevaCaracteristica`)
-5. Abre un Pull Request
+- Método depositoCorrecto: se depositan 1000.0 CLP, nuevo saldo cuenta 2000.0 CLP.
+- Método depositoIncorrecto: se depositan 1000.0 CLP, saldo cuenta se mantiene.
+- Método retiroCorrecto: se retiran 500.0 CLP, nuevo saldo cuenta 500.0 CLP-
+- Método retiroIncorrecto: se retiran 500.0 CLP, saldo cuenta se mantiene.
 
-### Guía de Estilo
+Clase CuentaUSD
 
-- Utiliza nombres descriptivos para variables y métodos
-- Documenta el código con comentarios JavaDoc
-- Sigue las convenciones de nomenclatura de Java (camelCase)
-- Mantén los métodos concisos y con una única responsabilidad
+- Método depositoUsdCorrecto: se depositan 10 USD, se realiza conversión a CLP, nuevo saldo cuenta 9733.5 CLP.
+- Método depositoUsdIncorrecto: se depositan 10 USD, saldo cuenta se mantiene en 1000.0 CLP.
+- Método retiroUsdCorrecto: se depositan 10 USD para evitar saldo insuficiente, se retiran 10 USD, se realiza conversión a CLP, nuevo saldo cuenta 1000.0 CLP.
+- Método retiroUsdIncorrecto: se retiran 10 USD, saldo es insuficiente por lo que la operación no se realiza, saldo cuenta se mantiene en 1000.0 CLP.
+
+```
+---
+
+## Referencias
+
+Recursos y referencias que facilitaron la resolución y mejorar de la calidad del proyecto:
+
+1. JUnit.
+2. GitHub.
+3. Eclipse IDE.
+
+
+### Backlog de tareas.
+
+- Crear Superclase CuentaBancaria con métodos para depositar y retirar monto en CLP de la wallet.
+- Crear Subclase CuentaUSD con métodos de sobreescritura para gestionar depósitos y retiros en USD.
+- Crear interface que especifique el valor del cambio de divisas.
+- Crear clase Cliente que maneje los datos del usuario de la wallet.
+- Crear Clase principal Main que permita la interacción del usuario con la wallet.
 
 ---
 
-## 📝 Mejoras Futuras
+## 📝 Recursos
 
-- [ ] Persistencia de datos (base de datos o archivos)
-- [ ] Historial de transacciones
-- [ ] Soporte para múltiples monedas
-- [ ] Interfaz gráfica (GUI)
-- [ ] Sistema de autenticación
-- [ ] API REST para integración con otros sistemas
-- [ ] Generación de reportes en PDF
-- [ ] Notificaciones por email
-- [ ] Tipo de cambio dinámico mediante API externa
+- Apoyo externo: Para el apoyo de este trabajo se revisaron perfiles y repositorios públicos de Github con el fin de comprender enfoques, estructuras y buenas prácticas de programación. Algunos son: 
+    www.github.com/Mariocanedo
+    www.github.com/
+  
+- Uso de recursos educativos: Para comprender el uso de GitHub se consultaron tutoriales educativos disponibles en YouTube:
+    https://www.youtube.com/watch?v=P0lr6ldSQe4
+  
+- Declaración de uso de Inteligencia Artificial: En la elaboración de este trabajo se utilizó inteligencia artificial como herramienta de apoyo, principalmente para comprender conceptos, resolver dudas técnicas y analizar posibles soluciones. El código final fue analizado, modificado y validado por la persona autora, asegurando el correcto funcionamiento, originalidad y el cumplimiento de principios éticos. Se hizo uso de:
+      Claude
+      OpenIA
+  
 
 ---
 
@@ -331,7 +349,7 @@ SOFTWARE.
 
 ## 👥 Autores
 
-- **Tu Nombre** - *Desarrollo Inicial* - [@tu-usuario](https://github.com/tu-usuario)
+- **Denisse Ibacache**  - [(https://github.com/DeniBeatriz)
 
 ---
 
@@ -343,20 +361,5 @@ SOFTWARE.
 
 ---
 
-## 📞 Contacto
 
-¿Tienes preguntas o sugerencias? 
 
-- **Email**: tu-email@ejemplo.com
-- **GitHub Issues**: [Reportar un problema](https://github.com/tu-usuario/alke-wallet/issues)
-- **LinkedIn**: [Tu Perfil](https://linkedin.com/in/tu-perfil)
-
----
-
-<div align="center">
-
-**⭐ Si este proyecto te fue útil, considera darle una estrella ⭐**
-
-Hecho con ❤️ y ☕ por [Tu Nombre](https://github.com/tu-usuario)
-
-</div>
